@@ -1,0 +1,116 @@
+.register{
+  width: 100%;
+  height: auto;
+  @include flex(center);
+  .container{
+    .register_page_con{
+      width: 50%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: $background;
+      padding: 25px 0 20px;
+      text-align: center;
+      @include flex(center, center, column);
+      .registerImg{
+        width: 70%;
+        margin: 0 auto;
+        #registerImg{
+          width: 100%;
+        }
+      }
+      form{
+        width: 100%;
+        margin-bottom: 70px;
+        .txt_field{
+          width: 80%;
+          margin: 30px auto;
+          position: relative;
+          border-bottom: 2px solid #f8f8ff;
+          input{
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+            &:focus ~ label,
+            &:valid ~ label{
+              top: -5px;
+              color: $black;
+            }
+            &:focus ~ span::before,
+            &:valid ~ span::before{
+              width: 100%;
+
+            }
+          }
+          label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #f8f8ff;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+          }
+          span{
+            &::before{
+              content: '';
+              position: absolute;
+              top: 40px;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              background-color: $black;
+              transition: .5s;
+            }
+          }
+        }
+      }
+      .register_texts{
+        color: $black;
+        width: 100%;
+        margin: 5px auto 15px;
+        .title{
+          width: 30%;
+          margin: 0 auto;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+        .text{
+          letter-spacing: 0.06em;
+        }
+      }
+      .btn{
+        width: 80%;
+        margin: 0 auto;
+        Button{
+          width: 100%;
+          background: $btnBackground;
+          padding: 15px 0;
+          mix-blend-mode: normal;
+          box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 50px;
+          text-transform: capitalize;
+          font-weight: 700;
+          font-size: 16px;
+          font-family: poppi;
+          letter-spacing: 0.06em;
+        }
+      }
+      .help_user{
+        font-size: 14px;
+        margin-top: 20px;
+        a{
+          text-decoration: none;
+          span{
+            color: rgba(216, 96, 91, 1);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
