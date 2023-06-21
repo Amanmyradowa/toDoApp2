@@ -32,9 +32,7 @@ const Register = () => {
             </div>
           </form>
           <div className="btn">
-            <Link to={'/dashboard'}>
-              <Button variant="contained">Register</Button>
-            </Link>
+            <Button variant="contained">Register</Button>
           </div>
           <div className="help_user">Already have an account ?
             <Link to={'/signIn'}>

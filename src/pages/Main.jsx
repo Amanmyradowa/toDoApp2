@@ -11,11 +11,9 @@ const Main = () => {
           <div className="mainImg">
             <img id='mainImg' src="./images/done.svg" alt="" />
           </div>
-          <div className="main_texts">
-            <div className="title">
-              <p>Welcome to</p>
-              <h2>OUR REMINDER</h2>
-            </div>
+          <div className="title">
+            <p>Welcome to</p>
+            <h2>OUR REMINDER</h2>
           </div>
           <div className="btn">
             <Link to={'/register'}>

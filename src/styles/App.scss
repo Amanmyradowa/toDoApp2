@@ -4,8 +4,12 @@
 @import"./config/fonts";
 
 // components
+@import"./components/list";
+@import"./components/profile";
 
 // pages
 @import"./pages/main";
 @import"./pages/registration";
 @import"./pages/signIn";
+@import"./pages/lists";
+@import"./pages/tasks";

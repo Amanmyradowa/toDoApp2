@@ -1,0 +1,55 @@
+.lists{
+  width: 100%;
+  @include flex();
+  .container{
+    .lists_page_con{
+      width: 45%;
+      height: 100vh;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      text-align: center;
+      @include flex(flex-start, center, column);
+      .empty_img{
+        width: 70%;
+        margin: 0 auto;
+        #empty_img{
+          width: 100%;
+        }
+      }
+      .lists{
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        overflow: auto;
+        padding-top: 50px;
+        @include flex(flex-start, center, column);
+        &::-webkit-scrollbar{
+          background: $background;
+          width: 5px;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+          background-color: grey;
+          border-radius: 10px;
+        }
+      }
+      .add_task{
+        width: 70%;
+        @include flex(flex-start);
+        margin: 30px auto;
+        Button{
+          width: 25%;
+          text-transform: capitalize;
+          background: $btnBackground;
+          box-shadow: none;
+          border-radius: 0 50px 50px 0;
+          font-weight: 700;
+          font-size: 16px;
+          font-family: poppi;
+          padding: 5px 10px;
+          margin-bottom: -5px;
+        }
+      }
+    }
+  }
+}

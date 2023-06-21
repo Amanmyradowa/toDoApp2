@@ -19,17 +19,75 @@ body {
   font-family: "poppi";
   src: url("./fonts/Poppins-Regular.ttf");
 }
-.main {
+a {
+  width: 70%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+a .list {
   width: 100%;
-  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 15px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+a .list p {
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 16px;
+}
+a .list .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+a .list span {
+  display: flex;
+  cursor: pointer;
+}
+a .list .line {
+  display: inline-block;
+  width: 1px;
+  height: 25px;
+  background-color: black;
+  margin: 0 10px;
+}
+
+.profile {
+  width: 100%;
+  background: rgba(244, 194, 127, 0.67);
+  padding: 100px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile .profile_img {
+  display: flex;
+  padding: 7px;
+  border: 3px solid #D8605B;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.main {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 .main .container .main_page_con {
-  width: 50%;
-  height: 100%;
+  width: 45%;
+  height: 100vh;
   margin: 0 auto;
   background-color: rgba(244, 194, 127, 0.67);
   padding: 55px 0 55px;
@@ -40,42 +98,20 @@ body {
   flex-direction: column;
 }
 .main .container .main_page_con .mainImg {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 .main .container .main_page_con .mainImg #mainImg {
   width: 100%;
 }
-.main .container .main_page_con .main_texts {
+.main .container .main_page_con .title {
   color: rgb(0, 0, 0);
   width: 80%;
-  margin: 50px auto 100px;
-}
-.main .container .main_page_con .btn {
-  width: 80%;
-  margin: 0 auto;
-}
-.main .container .main_page_con .btn Button {
-  width: 100%;
-  background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
-  padding: 15px 0;
-  mix-blend-mode: normal;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: poppi;
-  letter-spacing: 0.06em;
-}
-.main .container .main_page_con .btn Button #svg {
-  display: flex;
-  margin-left: 15px;
+  margin: 50px auto 70px;
 }
 
 .register {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,10 +119,9 @@ body {
 }
 .register .container .register_page_con {
   width: 50%;
-  height: 100%;
   margin: 0 auto;
   background-color: rgba(244, 194, 127, 0.67);
-  padding: 25px 0 20px;
+  padding-bottom: 20px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -94,57 +129,15 @@ body {
   flex-direction: column;
 }
 .register .container .register_page_con .registerImg {
-  width: 70%;
+  max-width: 70%;
   margin: 0 auto;
 }
 .register .container .register_page_con .registerImg #registerImg {
   width: 100%;
+  height: 280px;
 }
 .register .container .register_page_con form {
   width: 100%;
-  margin-bottom: 70px;
-}
-.register .container .register_page_con form .txt_field {
-  width: 80%;
-  margin: 30px auto;
-  position: relative;
-  border-bottom: 2px solid #f8f8ff;
-}
-.register .container .register_page_con form .txt_field input {
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  background: none;
-  outline: none;
-}
-.register .container .register_page_con form .txt_field input:focus ~ label, .register .container .register_page_con form .txt_field input:valid ~ label {
-  top: -5px;
-  color: rgb(0, 0, 0);
-}
-.register .container .register_page_con form .txt_field input:focus ~ span::before, .register .container .register_page_con form .txt_field input:valid ~ span::before {
-  width: 100%;
-}
-.register .container .register_page_con form .txt_field label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #f8f8ff;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.5s;
-}
-.register .container .register_page_con form .txt_field span::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  transition: 0.5s;
 }
 .register .container .register_page_con .register_texts {
   color: rgb(0, 0, 0);
@@ -160,15 +153,76 @@ body {
 .register .container .register_page_con .register_texts .text {
   letter-spacing: 0.06em;
 }
-.register .container .register_page_con .btn {
+.register .container .register_page_con .help_user {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.register .container .register_page_con .help_user a {
+  text-decoration: none;
+}
+.register .container .register_page_con .help_user a:hover span {
+  border-bottom: 1px solid rgb(216, 96, 91);
+}
+.register .container .register_page_con .help_user a span {
+  color: rgb(216, 96, 91);
+  font-weight: 700;
+  transition: 0.8s;
+}
+
+.txt_field {
+  width: 80%;
+  margin: 15px auto;
+  position: relative;
+  border-bottom: 2px solid #f8f8ff;
+}
+.txt_field:last-child {
+  margin-bottom: 30px;
+}
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field input:focus ~ label, .txt_field input:valid ~ label {
+  top: -5px;
+  color: rgb(0, 0, 0);
+}
+.txt_field input:focus ~ span::before, .txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #f8f8ff;
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.btn {
   width: 80%;
   margin: 0 auto;
 }
-.register .container .register_page_con .btn Button {
+.btn Button {
   width: 100%;
   background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
-  padding: 15px 0;
-  mix-blend-mode: normal;
+  padding: 10px 0;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
   border-radius: 50px;
   text-transform: capitalize;
@@ -177,16 +231,9 @@ body {
   font-family: poppi;
   letter-spacing: 0.06em;
 }
-.register .container .register_page_con .help_user {
-  font-size: 14px;
-  margin-top: 20px;
-}
-.register .container .register_page_con .help_user a {
-  text-decoration: none;
-}
-.register .container .register_page_con .help_user a span {
-  color: rgb(216, 96, 91);
-  font-weight: 700;
+.btn Button #svg {
+  display: flex;
+  margin-left: 15px;
 }
 
 .sign_in {
@@ -199,7 +246,7 @@ body {
 }
 .sign_in .container .sign_in_page_con {
   width: 50%;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
   background-color: rgba(244, 194, 127, 0.67);
   padding: 25px 0 20px;
@@ -211,15 +258,15 @@ body {
 }
 .sign_in .container .sign_in_page_con .sign_inImg {
   width: 70%;
-  margin: 0 auto;
+  margin: 0 auto 5px;
 }
 .sign_in .container .sign_in_page_con .sign_inImg #sign_inImg {
-  width: 100%;
+  max-width: 100%;
+  height: 280px;
 }
 .sign_in .container .sign_in_page_con .sign_in_texts {
   color: rgb(0, 0, 0);
   width: 100%;
-  margin: 5px auto 15px;
 }
 .sign_in .container .sign_in_page_con .sign_in_texts .title {
   width: 100%;
@@ -236,66 +283,6 @@ body {
 }
 .sign_in .container .sign_in_page_con form {
   width: 100%;
-  margin-bottom: 70px;
-}
-.sign_in .container .sign_in_page_con form .txt_field {
-  width: 80%;
-  margin: 30px auto;
-  position: relative;
-  border-bottom: 2px solid #f8f8ff;
-}
-.sign_in .container .sign_in_page_con form .txt_field input {
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  background: none;
-  outline: none;
-}
-.sign_in .container .sign_in_page_con form .txt_field input:focus ~ label, .sign_in .container .sign_in_page_con form .txt_field input:valid ~ label {
-  top: -5px;
-  color: rgb(0, 0, 0);
-}
-.sign_in .container .sign_in_page_con form .txt_field input:focus ~ span::before, .sign_in .container .sign_in_page_con form .txt_field input:valid ~ span::before {
-  width: 100%;
-}
-.sign_in .container .sign_in_page_con form .txt_field label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #f8f8ff;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.5s;
-}
-.sign_in .container .sign_in_page_con form .txt_field span::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  transition: 0.5s;
-}
-.sign_in .container .sign_in_page_con .btn {
-  width: 80%;
-  margin: 0 auto;
-}
-.sign_in .container .sign_in_page_con .btn Button {
-  width: 100%;
-  background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
-  padding: 15px 0;
-  mix-blend-mode: normal;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 50px;
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: poppi;
-  letter-spacing: 0.06em;
 }
 .sign_in .container .sign_in_page_con .help_user {
   font-size: 14px;
@@ -304,7 +291,85 @@ body {
 .sign_in .container .sign_in_page_con .help_user a {
   text-decoration: none;
 }
+.sign_in .container .sign_in_page_con .help_user a:hover span {
+  border-bottom: 1px solid rgb(216, 96, 91);
+}
 .sign_in .container .sign_in_page_con .help_user a span {
   color: rgb(216, 96, 91);
   font-weight: 700;
+}
+
+.lists {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.lists .container .lists_page_con {
+  width: 45%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.lists .container .lists_page_con .empty_img {
+  width: 70%;
+  margin: 0 auto;
+}
+.lists .container .lists_page_con .empty_img #empty_img {
+  width: 100%;
+}
+.lists .container .lists_page_con .lists {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.lists .container .lists_page_con .lists::-webkit-scrollbar {
+  background: rgba(244, 194, 127, 0.67);
+  width: 5px;
+  border-radius: 10px;
+}
+.lists .container .lists_page_con .lists::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+.lists .container .lists_page_con .add_task {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px auto;
+}
+.lists .container .lists_page_con .add_task Button {
+  width: 25%;
+  text-transform: capitalize;
+  background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
+  box-shadow: none;
+  border-radius: 0 50px 50px 0;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: poppi;
+  padding: 5px 10px;
+  margin-bottom: -5px;
+}
+
+.tasks {
+  width: 100%;
+}
+.tasks .container .tasks_page_con {
+  width: 45%;
+  margin: 0 auto;
+  height: 100vh;
 }/*# sourceMappingURL=App.css.map */

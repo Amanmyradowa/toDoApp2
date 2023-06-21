@@ -29,9 +29,7 @@ const SignIn = () => {
             </div>
           </form>
           <div className="btn">
-            <Link to={'/dashboard'}>
-              <Button variant="contained">Sign In</Button>
-            </Link>
+            <Button variant="contained">Sign In</Button>
           </div>
           <div className="help_user">Don’t have an account ?
             <Link to={'/register'}>
