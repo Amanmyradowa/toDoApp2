@@ -17,9 +17,7 @@ const Lists = () => {
           <div className="lists">
             {
               ListDatas.map((list, i) => (
-                <Link to={'/tasks'} key={i}>
-                  <List data={list} />
-                </Link>
+                <List data={list} key={i} />
               ))
             }
           </div>

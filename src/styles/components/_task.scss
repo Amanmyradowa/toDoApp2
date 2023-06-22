@@ -14,19 +14,17 @@
   }
   .icons{
     @include flex();
-    cursor: pointer;
-    span{
-      display: flex;
+    svg{
+      @include tablet{
+        width: 20px;
+        height: 20px;
+      }
     }
     .line{
       display: inline-block;
       width: 1px;
       height: 25px;
       background-color: black;
-      margin: 0 10px;
-    }
-    span{
-      display: flex;
     }
   }
 }

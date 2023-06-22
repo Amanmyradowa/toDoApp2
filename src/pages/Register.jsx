@@ -11,7 +11,7 @@ const Register = () => {
             <img id='registerImg' src="./images/done.svg" alt="" />
           </div>
           <div className="register_texts">
-            <h2 className="title">Get’s things done with TODO</h2>
+            <h2 className="title">Get’s things done <br /> with TODO</h2>
             <div className="motivation">Let’s help you meet up your tasks</div>
           </div>
           <form method='post'>
@@ -21,7 +21,7 @@ const Register = () => {
               <label>Enter your name</label>
             </div>
             <div className="txt_field">
-              <input type="email" required />
+              <input type="text" required />
               <span></span>
               <label>Enter your email</label>
             </div>

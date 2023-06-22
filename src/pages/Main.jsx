@@ -15,6 +15,7 @@ const Main = () => {
             <p>Welcome to</p>
             <h2>OUR REMINDER</h2>
           </div>
+          <p className='text'>″You can always change your plan, but only if you have one. I’m a big believer in to-do lists. It helps us break life into small steps. The most useful to-do list breaks tasks into small steps.″</p>
           <div className="btn">
             <Link to={'/register'}>
               <Button variant="contained">

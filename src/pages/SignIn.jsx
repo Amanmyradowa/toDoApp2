@@ -12,7 +12,7 @@ const SignIn = () => {
           </div>
           <div className="sign_in_texts">
             <div className="title">
-              <p>Welcome back to</p>
+              <p>Welcome back <br /> to</p>
               <h2>OUR REMINDER</h2>
             </div>
           </div>

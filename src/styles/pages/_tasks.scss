@@ -1,20 +1,49 @@
-.tasks{
+.tasks_page{
   width: 100%;
   .container{
+    @include tablet{
+      width: 100%;
+    }
     .tasks_page_con{
       width: 45%;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0 auto;
       background: #FFFFFF;
+      @include tablet{
+        width: 100%;
+      }
       .tasks_con{
-        padding: 50px 30px 0 30px;
+        padding: 50px 30px;
+        @include mobile{
+          height: 65vh;
+        }
         .tasks{
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
           padding: 20px;
           border-radius: 20px;
+          @include mobile{
+            max-height: calc(65vh - 100px);
+          }
           .task_theme{
             margin-bottom: 20px;
             font-weight: 600;
+          }
+          .task_scrolbar{
+            max-height: 250px;
+            overflow: auto;
+            padding-right: 25px;
+            @include mobile{
+              max-height: calc(65vh - 230px);
+            }
+            &::-webkit-scrollbar{
+              background: $background;
+              width: 5px;
+              border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb{
+              background-color: grey;
+              border-radius: 10px;
+            }
           }
         }
       }
