@@ -63,7 +63,7 @@ a .list .line {
 .profile {
   width: 100%;
   background: rgba(244, 194, 127, 0.67);
-  padding: 100px 0;
+  padding: 85px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,8 +77,51 @@ a .list .line {
   margin-bottom: 15px;
 }
 
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.task .task_left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.task .task_left span {
+  display: flex;
+  cursor: pointer;
+}
+.task .task_left p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.task .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.task .icons span {
+  display: flex;
+}
+.task .icons .line {
+  display: inline-block;
+  width: 1px;
+  height: 25px;
+  background-color: black;
+  margin: 0 10px;
+}
+.task .icons span {
+  display: flex;
+}
+
 .main {
   width: 100%;
+  height: 100vh;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -326,7 +369,7 @@ a .list .line {
 }
 .lists .container .lists_page_con .lists {
   width: 90%;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
   overflow: auto;
   padding-top: 50px;
@@ -352,6 +395,51 @@ a .list .line {
   flex-direction: row;
   margin: 30px auto;
 }
+.lists .container .lists_page_con .add_task .txt_field {
+  width: 80%;
+  margin: 15px auto;
+  position: relative;
+  border-bottom: 2px solid rgba(244, 194, 127, 0.67);
+}
+.lists .container .lists_page_con .add_task .txt_field:last-child {
+  margin-bottom: 30px;
+}
+.lists .container .lists_page_con .add_task .txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.lists .container .lists_page_con .add_task .txt_field input:focus ~ label, .lists .container .lists_page_con .add_task .txt_field input:valid ~ label {
+  top: -5px;
+  color: rgb(0, 0, 0);
+}
+.lists .container .lists_page_con .add_task .txt_field input:focus ~ span::before, .lists .container .lists_page_con .add_task .txt_field input:valid ~ span::before {
+  width: 100%;
+}
+.lists .container .lists_page_con .add_task .txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: rgba(244, 194, 127, 0.67);
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.lists .container .lists_page_con .add_task .txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
 .lists .container .lists_page_con .add_task Button {
   width: 25%;
   text-transform: capitalize;
@@ -370,6 +458,19 @@ a .list .line {
 }
 .tasks .container .tasks_page_con {
   width: 45%;
-  margin: 0 auto;
   height: 100vh;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+.tasks .container .tasks_page_con .tasks_con {
+  padding: 50px 30px 0 30px;
+}
+.tasks .container .tasks_page_con .tasks_con .tasks {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 20px;
+}
+.tasks .container .tasks_page_con .tasks_con .tasks .task_theme {
+  margin-bottom: 20px;
+  font-weight: 600;
 }/*# sourceMappingURL=App.css.map */

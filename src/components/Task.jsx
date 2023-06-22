@@ -1,9 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-const List = ({data}) => {
+const Task = (props) => {
+  console.log(props)
   return (
-    <div className='list'>
-      <p>{data.listTitle}</p>
+    <div className='task'>
+      <div className="task_left">
+        <span>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="16" height="16" fill="white" stroke="#0F4E52"/>
+          </svg>
+        </span>
+        <p>{props.note}</p>
+      </div>
       <div className="icons">
         <span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,4 +32,4 @@ const List = ({data}) => {
   )
 }
 
-export default List
+export default Task

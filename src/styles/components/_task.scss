@@ -1,0 +1,32 @@
+.task{
+  @include flex();
+  margin-bottom: 15px;
+  .task_left{
+    @include flex(flex-start);
+    span{
+      display: flex;
+      cursor: pointer;
+    }
+    p{
+      font-size: 14px;
+      margin-left: 10px
+    }
+  }
+  .icons{
+    @include flex();
+    cursor: pointer;
+    span{
+      display: flex;
+    }
+    .line{
+      display: inline-block;
+      width: 1px;
+      height: 25px;
+      background-color: black;
+      margin: 0 10px;
+    }
+    span{
+      display: flex;
+    }
+  }
+}
