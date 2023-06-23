@@ -522,7 +522,8 @@ body {
   background-color: grey;
   border-radius: 10px;
 }
-.lists .container .lists_page_con .add_task {
+
+.add_task {
   width: 70%;
   display: flex;
   justify-content: flex-start;
@@ -531,21 +532,21 @@ body {
   margin: 30px auto;
 }
 @media (max-width: 992px) {
-  .lists .container .lists_page_con .add_task {
+  .add_task {
     width: 80%;
     margin: 0 auto 20px;
   }
 }
-.lists .container .lists_page_con .add_task .txt_field {
-  width: 80%;
+.add_task .txt_field {
+  width: 70%;
   margin: 15px auto;
   position: relative;
   border-bottom: 2px solid rgba(244, 194, 127, 0.67);
 }
-.lists .container .lists_page_con .add_task .txt_field:last-child {
+.add_task .txt_field:last-child {
   margin-bottom: 30px;
 }
-.lists .container .lists_page_con .add_task .txt_field input {
+.add_task .txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -554,14 +555,14 @@ body {
   background: none;
   outline: none;
 }
-.lists .container .lists_page_con .add_task .txt_field input:focus ~ label, .lists .container .lists_page_con .add_task .txt_field input:valid ~ label {
+.add_task .txt_field input:focus ~ label, .add_task .txt_field input:valid ~ label {
   top: -5px;
   color: rgb(0, 0, 0);
 }
-.lists .container .lists_page_con .add_task .txt_field input:focus ~ span::before, .lists .container .lists_page_con .add_task .txt_field input:valid ~ span::before {
+.add_task .txt_field input:focus ~ span::before, .add_task .txt_field input:valid ~ span::before {
   width: 100%;
 }
-.lists .container .lists_page_con .add_task .txt_field label {
+.add_task .txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -572,11 +573,11 @@ body {
   transition: 0.5s;
 }
 @media (max-width: 992px) {
-  .lists .container .lists_page_con .add_task .txt_field label {
+  .add_task .txt_field label {
     font-size: 16px;
   }
 }
-.lists .container .lists_page_con .add_task .txt_field span::before {
+.add_task .txt_field span::before {
   content: "";
   position: absolute;
   top: 40px;
@@ -586,22 +587,21 @@ body {
   background-color: rgb(0, 0, 0);
   transition: 0.5s;
 }
-.lists .container .lists_page_con .add_task Button {
+.add_task Button {
   width: 30%;
   text-transform: capitalize;
   background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
   box-shadow: none;
   border-radius: 0 50px 50px 0;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   font-family: poppi;
   padding: 5px 10px;
-  margin-bottom: -5px;
+  margin-bottom: -8px;
 }
 @media (max-width: 992px) {
-  .lists .container .lists_page_con .add_task Button {
+  .add_task Button {
     width: 35%;
-    font-size: 16px;
   }
 }
 
@@ -625,11 +625,11 @@ body {
   }
 }
 .tasks_page .container .tasks_page_con .tasks_con {
-  padding: 50px 30px;
+  padding: 30px 30px;
 }
 @media (max-width: 460px) {
   .tasks_page .container .tasks_page_con .tasks_con {
-    height: 65vh;
+    height: 50vh;
   }
 }
 .tasks_page .container .tasks_page_con .tasks_con .tasks {
@@ -647,7 +647,7 @@ body {
   font-weight: 600;
 }
 .tasks_page .container .tasks_page_con .tasks_con .tasks .task_scrolbar {
-  max-height: 250px;
+  max-height: 220px;
   overflow: auto;
   padding-right: 25px;
 }
@@ -664,4 +664,7 @@ body {
 .tasks_page .container .tasks_page_con .tasks_con .tasks .task_scrolbar::-webkit-scrollbar-thumb {
   background-color: grey;
   border-radius: 10px;
+}
+.tasks_page .container .tasks_page_con .add_task {
+  margin: 0 auto;
 }/*# sourceMappingURL=App.css.map */

@@ -42,84 +42,84 @@
           border-radius: 10px;
         }
       }
-      .add_task{
-        width: 70%;
-        @include flex(flex-start);
-        margin: 30px auto;
-        @include laptop{
-          width: 80%;
-          margin: 0 auto 20px;
-        }
-        .txt_field{
-          width: 80%;
-          margin: 15px auto;
-          position: relative;
-          border-bottom: 2px solid $background;
-          &:last-child{
-            margin-bottom: 30px;
-          }
-          input{
-            width: 100%;
-            padding: 0 5px;
-            height: 40px;
-            font-size: 16px;
-            border: none;
-            background: none;
-            outline: none;
-            &:focus ~ label,
-            &:valid ~ label{
-              top: -5px;
-              color: $black;
-            }
-            &:focus ~ span::before,
-            &:valid ~ span::before{
-              width: 100%;
-        
-            }
-          }
-          label{
-            position: absolute;
-            top: 50%;
-            left: 5px;
-            color: $background;
-            transform: translateY(-50%);
-            font-size: 15px;
-            pointer-events: none;
-            transition: .5s;
-            @include laptop{
-              font-size: 16px;
-            }
-          }
-          span{
-            &::before{
-              content: '';
-              position: absolute;
-              top: 40px;
-              left: 0;
-              width: 0%;
-              height: 2px;
-              background-color: $black;
-              transition: .5s;
-            }
-          }
-        }
-        Button{
-          width: 30%;
-          text-transform: capitalize;
-          background: $btnBackground;
-          box-shadow: none;
-          border-radius: 0 50px 50px 0;
-          font-weight: 700;
-          font-size: 16px;
-          font-family: poppi;
-          padding: 5px 10px;
-          margin-bottom: -5px;
-          @include laptop{
-            width: 35%;
-            font-size: 16px;
-          }
-        }
+    }
+  }
+}
+
+.add_task{
+  width: 70%;
+  @include flex(flex-start);
+  margin: 30px auto;
+  @include laptop{
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  .txt_field{
+    width: 70%;
+    margin: 15px auto;
+    position: relative;
+    border-bottom: 2px solid $background;
+    &:last-child{
+      margin-bottom: 30px;
+    }
+    input{
+      width: 100%;
+      padding: 0 5px;
+      height: 40px;
+      font-size: 16px;
+      border: none;
+      background: none;
+      outline: none;
+      &:focus ~ label,
+      &:valid ~ label{
+        top: -5px;
+        color: $black;
       }
+      &:focus ~ span::before,
+      &:valid ~ span::before{
+        width: 100%;
+  
+      }
+    }
+    label{
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      color: $background;
+      transform: translateY(-50%);
+      font-size: 15px;
+      pointer-events: none;
+      transition: .5s;
+      @include laptop{
+        font-size: 16px;
+      }
+    }
+    span{
+      &::before{
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $black;
+        transition: .5s;
+      }
+    }
+  }
+  Button{
+    width: 30%;
+    text-transform: capitalize;
+    background: $btnBackground;
+    box-shadow: none;
+    border-radius: 0 50px 50px 0;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: poppi;
+    padding: 5px 10px;
+    margin-bottom: -8px;
+    @include laptop{
+      width: 35%;
     }
   }
 }
