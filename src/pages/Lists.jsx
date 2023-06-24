@@ -31,17 +31,36 @@ const Lists = () => {
     }
   }
 
-  const addList = async()=>{
-    try {
-      const res = await AxiosInstance.post('lists',{name:listName});
-      if(res.status === 200){
-        setLists([...lists,res.data]);
-        setListName('')
+  const addList = async(e)=>{
+    if(listName){
+      try {
+        const res = await AxiosInstance.post('lists',{name:listName});
+        if(res.status === 200){
+          setLists([...lists,res.data]);
+          setListName('')
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
+    }else{
+      alert("Listin adyny girizin")
     }
   } 
+
+  const editList = async(data,value,index)=>{
+    if(value){
+      try {
+        const res = await AxiosInstance.put('/lists/'+data.uuid,{name:value});
+        if(res.status === 200){
+          const localLists = [...lists];
+          localLists[index].name = value;
+          setLists(localLists)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
 
   return (
     <div className='lists'>
@@ -53,7 +72,7 @@ const Lists = () => {
               <div className="lists">
                 {
                   lists.map((list, i) => (
-                    <List data={list} key={i} index={i} deleteList={deleteList}/>
+                    <List data={list} key={i} index={i} deleteList={deleteList} editList={editList}/>
                   ))
                 }
               </div>
@@ -64,7 +83,7 @@ const Lists = () => {
           }
           <div className="add_task">
             <div className="txt_field">
-              <input type="text" value={listName} onChange={(e)=>setListName(e.target.value)} required/>
+              <input type="text" value={listName} onChange={(e)=>setListName(e.target.value)} onKeyDown={(e)=>e.key === 'Enter' ? addList() : ''} required/>
               <span></span>
               <label>What is the task today?</label>
             </div>

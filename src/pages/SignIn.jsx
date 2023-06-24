@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AxiosInstance } from '../common/AxiosInstance';
 
 const SignIn = () => {
-  
-  const navigate = useNavigate();
-
   const [data, setData] = useState({
     username: '',
     password: ''
@@ -24,7 +21,7 @@ const SignIn = () => {
         const res = await AxiosInstance.post('users/login', data);
         if(res.status === 200) {
           sessionStorage.setItem('token', res.data.token);
-          navigate('/lists')
+          window.location.href='/lists';
         }
       } catch ({response}) {
         const status = response.status;

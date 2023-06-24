@@ -52,6 +52,16 @@ body {
     font-size: 18px;
   }
 }
+.list input {
+  width: 80%;
+  margin: 15px 0 15px 15px;
+  border: none;
+  border-bottom: 2px solid rgba(244, 194, 127, 0.67);
+  outline: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 16px;
+}
 .list .icons {
   display: flex;
   justify-content: space-between;
@@ -116,6 +126,16 @@ body {
 .task .task_left p {
   font-size: 14px;
   margin-left: 10px;
+}
+.task input {
+  width: 80%;
+  margin: 15px 0 15px 15px;
+  border: none;
+  border-bottom: 2px solid rgba(244, 194, 127, 0.67);
+  outline: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 16px;
 }
 .task .icons {
   display: flex;
